@@ -1,0 +1,13 @@
+Content-Length: 25
+cmd: auth
+pkt: User:Server:Password
+Response: auth:User:Server:Password
+
+Content-Length: 18
+cmd: isuser
+pkt: User:Server
+Response: isuser:User:Server
+
+Content-Length: 4
+cmd: exit
+pkt: 
