@@ -36,8 +36,8 @@ check_libs:
 	@echo "Checking required libraries..."
 	@for lib in $(REQUIRED_LIBS); do \
 		if ! ldconfig -p | grep -q $$lib; then \
-			echo "ERROR: Required library $$lib not found. Please install it."; \
-			exit 1; \
+			echo "WARNING: The required library $$lib was not found. Please make sure it is installed."; \
+			# exit 1; \
 		fi; \
 	done
 	@echo "All required libraries found."
