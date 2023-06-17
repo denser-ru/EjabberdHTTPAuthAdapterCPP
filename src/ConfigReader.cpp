@@ -1,7 +1,9 @@
 #include "ConfigReader.h"
-#include <iostream>
 #include <fstream>
 #include <sstream>
+#include <stdexcept>
+#include <iostream>
+#include <string>
 
 ConfigReader::ConfigReader(const std::string& configFile) : configFile_(configFile) {}
 
@@ -27,4 +29,8 @@ ConfigMap ConfigReader::readConfig() {
 
     configFileStream.close();
     return configMap;
+}
+
+std::string ConfigReader::getConfigFilePath() const {
+    return configFile_;
 }

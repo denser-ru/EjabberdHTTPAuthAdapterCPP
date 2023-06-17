@@ -1,0 +1,5 @@
+Starting echo server on port 8080...
+Received data: auth:User:Server:Password
+Received data: isuser:User:Server
+Received data: auth:User:Server:Password
+Received data: isuser:User:Server

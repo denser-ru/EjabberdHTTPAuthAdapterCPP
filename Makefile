@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -Wextra
-LDFLAGS =
+LDFLAGS = -g
 LDLIBS = -lcurl
 
 SRC_DIR = src

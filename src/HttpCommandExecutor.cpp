@@ -26,6 +26,7 @@ bool HttpCommandExecutor::executeCommand(const std::string& cmd, const std::stri
     std::string requestData = cmd + ":" + pkt;
 
     // Установка URL
+    std::cout << "Попытка соединения с URL: " << url_ << std::endl;
     curl_easy_setopt(curl, CURLOPT_URL, url_.c_str());
 
     // Установка метода запроса POST
@@ -51,4 +52,9 @@ bool HttpCommandExecutor::executeCommand(const std::string& cmd, const std::stri
     std::cout << "Response: " << responseData << std::endl;
 
     return true;
+}
+
+void HttpCommandExecutor::setUrl(const std::string &url)
+{
+    url_ = url;
 }
