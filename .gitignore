@@ -33,3 +33,7 @@
 
 # Visual Studio Code служебные файлы
 .vscode/
+
+# отладочные файлы
+auth_http.err
+auth_http.log

@@ -4,6 +4,9 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
+#include <unistd.h>
+#include <fcntl.h>
+#include <arpa/inet.h>
 #include "ConfigReader.h"
 #include "HttpCommandExecutor.h"
 
@@ -17,6 +20,8 @@ class AuthHTTP {
 
 		void						run( void );
 		const Config*				getConfig( void ) const;
+		bool						wait_for_input(int fd, int timeout_ms);
+		std::string					read_authentication_request( void );
 
 	private:
 		ConfigReader				configReader;
