@@ -6,6 +6,7 @@
 #include <sstream>
 #include <unistd.h>
 #include <fcntl.h>
+#include <sys/select.h>
 #include <arpa/inet.h>
 #include "ConfigReader.h"
 #include "HttpCommandExecutor.h"
